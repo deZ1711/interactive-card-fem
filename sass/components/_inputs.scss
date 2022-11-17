@@ -1,0 +1,27 @@
+input {
+  height: 3em;
+  border-radius: 5px;
+  border: 1px solid $light-grayish-violet;
+  padding-left: 4%;
+  color: $light-grayish-violet;
+}
+
+.card {
+  &__form {
+    &--name {
+      width: 100%;
+    }
+    &--number {
+      width: 100%;
+    }
+    &--month {
+      width: 48%;
+    }
+    &--year {
+      width: 48%;
+    }
+    &--cvv {
+      width: 100%;
+    }
+  }
+}

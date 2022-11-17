@@ -1,3 +1,19 @@
 body {
-    
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  color: $very-dark-violet;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  color: white;
+}
+
+.card {
+  &__infos {
+    font-size: 15px;
+  }
 }

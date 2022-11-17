@@ -5,38 +5,104 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Interactive card</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./app.js" type="module" defer></script>
 </head>
 <body>
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+<header>
+  <div class="cards__container">
+    <div class="card__back">
+      <img class="card__img--back" src="./images/bg-card-back.png" alt="">
+      <div class="card__cvv">000</div>
+    </div>
+    <div class="card__front">
+      <img class="card__img--front" src="./images/bg-card-front.png" alt="">
+      <img class="card__img--logo" src="./images/card-logo.svg" alt="">
+      <div class="card__number">1234 5678 9123 0000</div>
+      <div class="card__infos">
+        <div class="card__name">Jane Appleseed</div>
+        <div class="card__date">
+          <div class="card__month">00</div>
+          <p>/</p>
+          <div class="card__year">00</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="container">
+  <form class="card__form">
+    <div class="card__grid--1">
+      <label for="name">Cardholder Name</label>
+      <input  class="card__form--name" 
+              id="name"  
+              type="text" 
+              placeholder="e.g. Jane Appleseed" 
+              required
+      >
+    </div>
+    <div class="card__grid--2">
+      <label for="number">Card Number</label>
+      <input  class="card__form--number" 
+              type="number" 
+              id="number" 
+              maxlength="16"
+              minlength="16" 
+              placeholder="e.g. 1234 5678 9123 0000" 
+              oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)"
+              required
+              >
+    </div>
+    <div class="card__grid--3">
+      <label for="month">Exp. Date (MM/YY)
+        <input class="card__form--month" 
+               type="number" 
+               id="month" 
+               min="01"
+               max="12" 
+               maxlength="2" 
+               minlength="2" 
+               placeholder="MM" 
+               oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)"
+               required
+               >
+        <input class="card__form--year" 
+               type="number" 
+               id="year"
+               maxlength="2" 
+               minlength="2" 
+               placeholder="YY" 
+               oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)"
+               required
+               >
+      </label>
+    </div>
+    <div class="card__grid--4">
+      <label for="CVV">CVV</label>
+      <input class="card__form--cvv" 
+             type="number" 
+             maxlength="3" 
+             minlength="3" 
+             placeholder="e.g. 123"
+             oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+             required
+             >
+    </div>
+    <button class="card__button--submit">Confirm</button>    
+  </form>
 
-  000
+  <section class="card__completed hidden" aria-hidden="true">
 
-  Cardholder Name
-  e.g. Jane Appleseed
+    <img class="card__img--completed" src="./images/icon-complete.svg" alt="">
+    <h1>Thank you!</h1>
+    <p>We've added your card details</p>
+    <button class="card__button--continue">Continue</button>
 
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-  
+  </section>
+</main>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://www.bdesile.com/">deZ</a>.
   </div>
 </body>
 </html>

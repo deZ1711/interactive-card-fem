@@ -3,13 +3,19 @@
 *::before {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 html {
-    font-size: 14px;
+    font-size: 18px;
 }
 
-body {
-    box-sizing: border-box;
+.card__completed.hidden,
+form.hidden,
+.hidden {
+    display: none;
+}
+
+.attribution {
+    margin-top: 100px;
 }
