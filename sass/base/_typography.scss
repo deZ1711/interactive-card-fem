@@ -16,4 +16,17 @@ header {
   &__infos {
     font-size: 15px;
   }
+  &__completed {
+    & > img {
+      width: 25%;
+      margin-top: 1em;
+    }
+    & > h1 {
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+    & > p {
+      color: $dark-grayish-violet;
+    }
+  } 
 }

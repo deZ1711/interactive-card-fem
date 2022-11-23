@@ -5,27 +5,47 @@
     position: absolute;
     right: 5%;
     top: 10%;
-  }
-  &--front {
-    width: 70%;
-    position: absolute;
-    left: 5%;
-    top: 50%;
-  }
-  &--logo {
-    width: 50px;
-    position: absolute;
-    top: 60%;
-    left: 10%;
+    @include media-min("desktop") {
+      top: 50%;
+      width: 100%;
+      left: 50%;
+    } 
     }
-  &--completed {
-    width: 100px;
+    &--front {
+      width: 70%;
+      position: absolute;
+      left: 5%;
+      top: 50%;
+      @include media-min("desktop") {
+        width: 100%;
+        top: 28%;
+        left: 25%;
+      }
+    }
+    &--logo {
+      width: 50px;
+      position: absolute;
+      top: 60%;
+      left: 10%;
+      @include media-min("desktop") {
+        width: 20%;
+        top: 30%;
+        left: 30%; 
+      }
+    }
+    &--completed {
+      width: 100px;
     }
   }
   &__cvv {
     position: absolute;
     top: 40%;
     right: 15%;
+    @include media-min("desktop") {
+      position: absolute;
+      top: 58%;
+      left: 130%; 
+    }
   }
   &__number {
     position: absolute;

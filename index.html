@@ -31,7 +31,7 @@
   </div>
 </header>
 <main class="container">
-  <form class="card__form">
+  <form id="form" class="card__form">
     <div class="card__grid--1">
       <label for="name">Cardholder Name</label>
       <input  class="card__form--name" 
@@ -96,13 +96,9 @@
     <img class="card__img--completed" src="./images/icon-complete.svg" alt="">
     <h1>Thank you!</h1>
     <p>We've added your card details</p>
-    <button class="card__button--continue">Continue</button>
+    <button form="form" type="reset" class="card__button--continue">Continue</button>
 
   </section>
 </main>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://www.bdesile.com/">deZ</a>.
-  </div>
 </body>
 </html>

@@ -3,7 +3,10 @@ input {
   border-radius: 5px;
   border: 1px solid $light-grayish-violet;
   padding-left: 4%;
-  color: $light-grayish-violet;
+  color: $very-dark-violet;
+  &::placeholder {
+    color: $light-grayish-violet;
+  }
 }
 
 .card {

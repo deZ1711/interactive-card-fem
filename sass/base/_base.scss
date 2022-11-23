@@ -10,6 +10,13 @@ html {
     font-size: 18px;
 }
 
+body {
+    @include media-min("desktop") {
+     display: flex; 
+    }
+}
+
+
 .card__completed.hidden,
 form.hidden,
 .hidden {
