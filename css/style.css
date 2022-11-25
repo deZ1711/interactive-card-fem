@@ -11,10 +11,12 @@ html {
   font-size: 18px;
 }
 
-@media screen and (min-width: 1024px) {
-  body {
-    display: flex;
-  }
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
 }
 
 .card__completed.hidden,
@@ -25,6 +27,13 @@ form.hidden,
 
 .attribution {
   margin-top: 100px;
+}
+
+header {
+  width: 100%;
+  min-height: 30vh;
+  background: url(../../images/bg-main-mobile.png) center center/cover no-repeat;
+  position: relative;
 }
 
 body {
@@ -104,98 +113,61 @@ input::placeholder {
 }
 
 .cards__container {
-  background: url(../../images/bg-main-mobile.png) center center/cover no-repeat;
-  min-height: 30vh;
-  position: relative;
-}
-@media screen and (min-width: 1024px) {
-  .cards__container {
-    width: 20vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 60%;
+  top: 60%;
 }
 
 .container {
   margin-top: 10vh;
 }
-@media screen and (min-width: 1024px) {
-  .container {
-    margin-top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-  }
-}
 
-.card__img--back {
-  width: 70%;
-  position: absolute;
-  right: 5%;
-  top: 10%;
+.card__front {
+  position: relative;
+  transform: translate(-200px, -20px);
+  width: 300px;
 }
-@media screen and (min-width: 1024px) {
-  .card__img--back {
-    top: 50%;
-    width: 100%;
-    left: 50%;
-  }
+.card__back {
+  width: 300px;
+  position: relative;
+  transform: translate(-150px, -105px);
+}
+.card__img--back {
+  width: 270px;
+  position: absolute;
 }
 .card__img--front {
-  width: 70%;
+  width: 270px;
   position: absolute;
-  left: 5%;
-  top: 50%;
-}
-@media screen and (min-width: 1024px) {
-  .card__img--front {
-    width: 100%;
-    top: 28%;
-    left: 25%;
-  }
 }
 .card__img--logo {
   width: 50px;
   position: absolute;
-  top: 60%;
-  left: 10%;
-}
-@media screen and (min-width: 1024px) {
-  .card__img--logo {
-    width: 20%;
-    top: 30%;
-    left: 30%;
-  }
+  top: 15px;
+  left: 20px;
 }
 .card__img--completed {
   width: 100px;
 }
 .card__cvv {
   position: absolute;
-  top: 40%;
-  right: 15%;
-}
-@media screen and (min-width: 1024px) {
-  .card__cvv {
-    position: absolute;
-    top: 58%;
-    left: 130%;
-  }
+  top: 60px;
+  right: 60px;
 }
 .card__number {
   position: absolute;
-  bottom: 0;
-  left: 13%;
+  bottom: -100px;
+  left: 40px;
 }
 .card__infos {
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: absolute;
-  width: 60%;
-  bottom: -15%;
+  width: 70%;
+  bottom: -130px;
   left: 10%;
 }
 .card__date {
