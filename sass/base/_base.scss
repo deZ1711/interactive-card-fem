@@ -35,7 +35,10 @@ form.hidden,
 
 header {
     width: 100%;
-    min-height: 220px;
+    height: 30vh;
     background: url(../../images/bg-main-mobile.png) center center / cover no-repeat;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

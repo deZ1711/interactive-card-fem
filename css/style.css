@@ -37,9 +37,12 @@ form.hidden,
 
 header {
   width: 100%;
-  min-height: 220px;
+  height: 30vh;
   background: url(../../images/bg-main-mobile.png) center center/cover no-repeat;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 body {
@@ -118,39 +121,38 @@ input::placeholder {
   width: 100%;
 }
 
-.cards__container {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 220px;
-  align-items: center;
-}
-
 .container {
   margin-top: 10vh;
   width: 100%;
 }
 
+.cards__container {
+  position: relative;
+  width: clamp(300px, 80vw, 600px);
+  aspect-ratio: 447/245;
+}
+
 .card__front {
   position: relative;
-  height: 100%;
-  transform: translateX(-14%);
-  width: 270px;
+  width: 90%;
+  aspect-ratio: 447/245;
+  bottom: -15%;
+  left: 0;
 }
 .card__back {
   position: relative;
-  transform: translate(14%, 20%);
-  height: 100%;
-  width: 270px;
+  width: 90%;
+  aspect-ratio: 447/245;
+  right: -14%;
+  bottom: -38%;
 }
 .card__img--back {
-  width: 270px;
   position: absolute;
+  width: 95%;
 }
 .card__img--front {
-  width: 270px;
   position: absolute;
+  width: 95%;
 }
 .card__img--logo {
   width: 50px;

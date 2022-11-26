@@ -1,24 +1,26 @@
 .card {
   &__front {
     position: relative;
-    height: 100%;
-    transform: translateX(-14%);
-    width: 270px;
+    width: 90%;
+    aspect-ratio: 447 / 245;
+    bottom: -15%;
+    left: 0;
   }
   &__back {
     position: relative;
-    transform: translate(14%, 20%);
-    height: 100%;
-    width: 270px;
+    width: 90%;
+    aspect-ratio: 447 / 245;
+    right: -14%;
+    bottom: -38%;
   }
   &__img {
     &--back {
-    width: 270px;
-    position: absolute;
-  }
-  &--front {
-      width: 270px;
       position: absolute;
+      width: 95%
+    }
+    &--front {
+      position: absolute;
+      width: 95%
     }
     &--logo {
       width: 50px;

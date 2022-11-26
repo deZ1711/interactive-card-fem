@@ -1,13 +1,10 @@
-.cards__container {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 220px;
-  align-items: center;
-}
-
 .container {
 margin-top: 10vh;
 width: 100%;
+}
+
+.cards__container {
+  position: relative;
+  width: clamp(300px, 80vw, 600px);
+  aspect-ratio: 447 / 245;
 }
