@@ -1,37 +1,30 @@
 .card {
+  &__front {
+    position: relative;
+    transform: translateX(10%);
+    height: 100%;
+    width: 270px;
+  }
+  &__back {
+    position: relative;
+    transform: translate(30%, 23%);
+    height: 100%;
+    width: 270px;
+  }
   &__img {
     &--back {
-    width: 70%;
+    width: 270px;
     position: absolute;
-    right: 5%;
-    top: 10%;
-    @include media-min("desktop") {
-      top: 50%;
-      width: 100%;
-      left: 50%;
-    } 
-    }
-    &--front {
-      width: 70%;
+  }
+  &--front {
+      width: 270px;
       position: absolute;
-      left: 5%;
-      top: 50%;
-      @include media-min("desktop") {
-        width: 100%;
-        top: 28%;
-        left: 25%;
-      }
     }
     &--logo {
       width: 50px;
       position: absolute;
-      top: 60%;
-      left: 10%;
-      @include media-min("desktop") {
-        width: 20%;
-        top: 30%;
-        left: 30%; 
-      }
+      top: 15%;
+      left: 8%;
     }
     &--completed {
       width: 100px;
@@ -39,27 +32,22 @@
   }
   &__cvv {
     position: absolute;
-    top: 40%;
+    top: 55%;
     right: 15%;
-    @include media-min("desktop") {
-      position: absolute;
-      top: 58%;
-      left: 130%; 
-    }
   }
   &__number {
     position: absolute;
-    bottom: 0;
-    left: 13%;
+    bottom: 15%;
+    left: 15%;
   }
   &__infos {
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: absolute;
-    width: 60%;
+    width: 70%;
     bottom: -15%;
-    left: 10%;
+    left: 14%;
   }
   &__date {
     display: flex;
@@ -100,6 +88,7 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    margin: 5%;
+    margin: 5%, 0;
+    width: 100vw;
   }
 }
