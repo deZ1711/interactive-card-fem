@@ -18,6 +18,12 @@ body {
   width: 100vw;
   height: 100vh;
 }
+@media screen and (min-width: 1024px) {
+  body {
+    flex-direction: row;
+    height: 100vh;
+  }
+}
 
 .card__completed.hidden,
 form.hidden,
@@ -31,7 +37,7 @@ form.hidden,
 
 header {
   width: 100%;
-  min-height: 30vh;
+  min-height: 220px;
   background: url(../../images/bg-main-mobile.png) center center/cover no-repeat;
   position: relative;
 }
@@ -78,7 +84,7 @@ header {
 }
 .card__button--continue {
   height: 4em;
-  width: 100%;
+  width: 90%;
   border-radius: 5px;
   background-color: hsl(278deg, 68%, 11%);
   color: hsl(0deg, 0%, 100%);
@@ -116,23 +122,26 @@ input::placeholder {
   position: absolute;
   display: flex;
   flex-direction: column;
-  left: 60%;
-  top: 60%;
+  width: 100%;
+  height: 220px;
 }
 
 .container {
   margin-top: 10vh;
+  width: 100%;
 }
 
 .card__front {
   position: relative;
-  transform: translate(-200px, -20px);
-  width: 300px;
+  transform: translateX(10%);
+  height: 100%;
+  width: 270px;
 }
 .card__back {
-  width: 300px;
   position: relative;
-  transform: translate(-150px, -105px);
+  transform: translate(30%, 23%);
+  height: 100%;
+  width: 270px;
 }
 .card__img--back {
   width: 270px;
@@ -145,21 +154,21 @@ input::placeholder {
 .card__img--logo {
   width: 50px;
   position: absolute;
-  top: 15px;
-  left: 20px;
+  top: 15%;
+  left: 8%;
 }
 .card__img--completed {
   width: 100px;
 }
 .card__cvv {
   position: absolute;
-  top: 62px;
-  right: 60px;
+  top: 55%;
+  right: 15%;
 }
 .card__number {
   position: absolute;
-  bottom: -100px;
-  left: 40px;
+  bottom: 15%;
+  left: 15%;
 }
 .card__infos {
   display: flex;
@@ -167,8 +176,8 @@ input::placeholder {
   justify-content: space-between;
   position: absolute;
   width: 70%;
-  bottom: -130px;
-  left: 10%;
+  bottom: -15%;
+  left: 14%;
 }
 .card__date {
   display: flex;
@@ -207,7 +216,8 @@ input::placeholder {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  margin: 5%;
+  margin: 5%, 0;
+  width: 100vw;
 }
 
 /*# sourceMappingURL=style.css.map */

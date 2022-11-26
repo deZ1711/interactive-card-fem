@@ -1,13 +1,15 @@
 .card {
   &__front {
     position: relative;
-    transform: translate(-200px, -20px);
-    width: 300px;
+    transform: translateX(10%);
+    height: 100%;
+    width: 270px;
   }
   &__back {
-    width: 300px;
     position: relative;
-    transform: translate(-150px, -105px);
+    transform: translate(30%, 23%);
+    height: 100%;
+    width: 270px;
   }
   &__img {
     &--back {
@@ -21,8 +23,8 @@
     &--logo {
       width: 50px;
       position: absolute;
-      top: 15px;
-      left: 20px;
+      top: 15%;
+      left: 8%;
     }
     &--completed {
       width: 100px;
@@ -30,13 +32,13 @@
   }
   &__cvv {
     position: absolute;
-    top: 62px;
-    right: 60px;
+    top: 55%;
+    right: 15%;
   }
   &__number {
     position: absolute;
-    bottom: -100px;
-    left: 40px;
+    bottom: 15%;
+    left: 15%;
   }
   &__infos {
     display: flex;
@@ -44,8 +46,8 @@
     justify-content: space-between;
     position: absolute;
     width: 70%;
-    bottom: -130px;
-    left: 10%;
+    bottom: -15%;
+    left: 14%;
   }
   &__date {
     display: flex;
@@ -86,6 +88,7 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    margin: 5%;
+    margin: 5%, 0;
+    width: 100vw;
   }
 }

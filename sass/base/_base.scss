@@ -16,6 +16,10 @@ body {
     flex-direction: column;
     width: 100vw;
     height: 100vh;
+    @include media-min("desktop") {
+        flex-direction: row;
+        height: 100vh;
+      } 
 }
 
 
@@ -31,7 +35,7 @@ form.hidden,
 
 header {
     width: 100%;
-    min-height: 30vh;
+    min-height: 220px;
     background: url(../../images/bg-main-mobile.png) center center / cover no-repeat;
     position: relative;
 }
