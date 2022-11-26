@@ -1,13 +1,13 @@
 .card {
   &__front {
     position: relative;
-    transform: translateX(10%);
     height: 100%;
+    transform: translateX(-14%);
     width: 270px;
   }
   &__back {
     position: relative;
-    transform: translate(30%, 23%);
+    transform: translate(14%, 20%);
     height: 100%;
     width: 270px;
   }
