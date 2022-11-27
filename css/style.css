@@ -18,12 +18,6 @@ body {
   width: 100vw;
   height: 100vh;
 }
-@media screen and (min-width: 1024px) {
-  body {
-    flex-direction: row;
-    height: 100vh;
-  }
-}
 
 .card__completed.hidden,
 form.hidden,
@@ -130,30 +124,28 @@ input::placeholder {
 .cards__container {
   position: relative;
   width: clamp(300px, 80vw, 600px);
-  aspect-ratio: 447/245;
+  aspect-ratio: 1.8244897959;
+  height: 100%;
+  top: 2rem;
 }
 
 .card__front {
-  position: relative;
-  width: 90%;
-  aspect-ratio: 447/245;
-  bottom: 10%;
+  position: absolute;
+  width: 85%;
+  bottom: 0;
   left: 0;
 }
 .card__back {
-  position: relative;
-  width: 90%;
-  aspect-ratio: 447/245;
-  right: -14%;
-  bottom: -12%;
+  position: absolute;
+  width: 85%;
+  right: 0;
+  top: 0;
 }
 .card__img--back {
-  position: absolute;
-  width: 95%;
+  width: 100%;
 }
 .card__img--front {
-  position: absolute;
-  width: 95%;
+  width: 100%;
 }
 .card__img--logo {
   width: 50px;
@@ -166,13 +158,13 @@ input::placeholder {
 }
 .card__cvv {
   position: absolute;
-  top: 55%;
+  top: 42%;
   right: 15%;
 }
 .card__number {
   position: absolute;
-  bottom: 15%;
-  left: 15%;
+  bottom: 35%;
+  left: 20%;
 }
 .card__infos {
   display: flex;
@@ -180,7 +172,7 @@ input::placeholder {
   justify-content: space-between;
   position: absolute;
   width: 70%;
-  bottom: -15%;
+  bottom: 10%;
   left: 14%;
 }
 .card__date {

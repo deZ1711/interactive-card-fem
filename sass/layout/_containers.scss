@@ -6,5 +6,7 @@ width: 100%;
 .cards__container {
   position: relative;
   width: clamp(300px, 80vw, 600px);
-  aspect-ratio: 447 / 245;
+  aspect-ratio: $ratio;
+  height: 100%;
+  top: 2rem;
 }

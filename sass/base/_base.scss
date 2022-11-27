@@ -16,10 +16,10 @@ body {
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    @include media-min("desktop") {
-        flex-direction: row;
-        height: 100vh;
-      } 
+    // @include media-min("desktop") {
+    //     flex-direction: row;
+    //     height: 100vh;
+    //   } 
 }
 
 
