@@ -30,3 +30,8 @@ header {
     }
   } 
 }
+
+.js-errorname {
+  color: $input-error !important;
+  text-transform: none;
+}

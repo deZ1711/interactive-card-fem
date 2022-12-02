@@ -18,6 +18,9 @@
       background-color: $very-dark-violet;
       color: $white;
       border: 1px solid $very-dark-violet;
+      @include media-min("desktop") {
+        width: 100%;
+      }
     }
   }
 }

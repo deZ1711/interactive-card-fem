@@ -4,12 +4,20 @@
     width: 85%;
     bottom: 0;
     left: 0;
+    @include media-min("desktop") {
+      top: 0%;
+      left: 25%;
+    }
   }
   &__back {
     position: absolute;
     width: 85%;
     right: 0;
     top: 0;
+    @include media-min("desktop") {
+      top: 45%;
+      left: 40%;
+    }
   }
   &__img {
     &--back {
@@ -23,6 +31,10 @@
       position: absolute;
       top: 15%;
       left: 8%;
+      @include media-min("desktop") {
+        top: 3%;
+        width: 100px;
+      }
     }
     &--completed {
       width: 100px;
@@ -32,11 +44,23 @@
     position: absolute;
     top: 42%;
     right: 15%;
+    text-transform: uppercase;
+    @include media-min("desktop") {
+      font-size: 1.2rem;
+      top: 44%;
+    }
   }
   &__number {
     position: absolute;
     bottom: 35%;
     left: 20%;
+    text-transform: uppercase;
+    @include media-min("desktop") {
+      top: 24%;
+      left: 10%;
+      letter-spacing: .2rem;
+      font-size: 1.8rem;
+    }
   }
   &__infos {
     display: flex;
@@ -46,10 +70,20 @@
     width: 70%;
     bottom: 10%;
     left: 14%;
+    text-transform: uppercase;
+    @include media-min("desktop") {
+      top: -15%;
+      font-size: 1.3rem;
+      width: 90%;
+      left: 5%;
+      font-size: .95em;
+      letter-spacing: .1rem;
+    }
   }
   &__date {
     display: flex;
     justify-content: right;
+    text-transform: uppercase;
   }
   &__form {
     display: grid;
@@ -58,6 +92,8 @@
     margin: 5%;
     row-gap: 5%;
     column-gap: 0;
+    text-transform: uppercase;
+    letter-spacing: .1em;
   }
   &__grid {
     &--1 {
@@ -88,5 +124,8 @@
     gap: 2rem;
     margin: 5%, 0;
     width: 100vw;
+    @include media-min("desktop") {
+      width: 100%;
+    }
   }
 }

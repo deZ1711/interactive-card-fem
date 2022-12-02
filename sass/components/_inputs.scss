@@ -7,6 +7,13 @@ input {
   &::placeholder {
     color: $light-grayish-violet;
   }
+  &:hover, &:active, &:focus {
+    border: 1px solid $very-dark-violet;
+    cursor: pointer;
+  }
+  &:focus-visible {
+    outline-style: none;
+  }
 }
 
 .card {

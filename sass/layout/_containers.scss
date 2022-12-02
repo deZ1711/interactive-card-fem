@@ -1,6 +1,11 @@
 .container {
 margin-top: 10vh;
 width: 100%;
+@include media-min("desktop") {
+  width: 30%;
+  margin-top: 0;
+  margin-left: 30%;
+}
 }
 
 .cards__container {
@@ -9,4 +14,8 @@ width: 100%;
   aspect-ratio: $ratio;
   height: 100%;
   top: 2rem;
+  @include media-min("desktop") {
+    height: 50%;
+    top: 25%;
+  }
 }

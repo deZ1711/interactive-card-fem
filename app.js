@@ -12,10 +12,23 @@ const submitBtn = document.querySelector('.card__button--submit')
 const completedSection = document.querySelector('.card__completed')
 const formSection = document.querySelector('.card__form')
 const resetBtn = document.querySelector('.card__button--continue') 
+const errorName = document.querySelector('.js-errorname')
+const errorNumber = document.querySelector('.js-errornumber')
+const errorDate = document.querySelector('.js-errordate')
+const errorCvv = document.querySelector('.js-errorcvv')
 
 
 inputName.addEventListener('keyup', function (e) {
+  let name = inputName.value;
+  let key = e.key;
+  let verifName = key.match(/[A-Za-z]/);
+  if (name.length === 0) {
+    errorName.innerText = "Entrez votre nom."
+  } else if (verifName) {
   cardName.innerText = e.target.value
+  } else {
+    errorName.innerText = "Utilisez seulement des lettres."
+  }
 })
 inputNumber.addEventListener('keyup', function (e) {
   cardNumber.innerText = (e.target.value).toString().replace(/\d{4}(?=.)/g, "$& ")
@@ -29,6 +42,8 @@ inputYear.addEventListener('keyup', function (e) {
 inputCvv.addEventListener('keyup', function (e) {
   cardCvv.innerText = e.target.value
 })
+
+
 
 submitBtn.addEventListener('click', (e) => {
   e.preventDefault()

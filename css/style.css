@@ -18,6 +18,13 @@ body {
   width: 100vw;
   height: 100vh;
 }
+@media screen and (min-width: 1440px) {
+  body {
+    flex-direction: row;
+    align-items: flex-start;
+    align-items: center;
+  }
+}
 
 .card__completed.hidden,
 form.hidden,
@@ -38,6 +45,15 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (min-width: 1440px) {
+  header {
+    height: 100vh;
+    width: 30%;
+    max-height: 100vh;
+    max-width: 450px;
+    background: url(../../images/bg-main-desktop.png) center center/cover no-repeat;
+  }
 }
 
 body {
@@ -69,6 +85,11 @@ header {
   color: hsl(279deg, 6%, 55%);
 }
 
+.js-errorname {
+  color: hsl(0deg, 100%, 66%) !important;
+  text-transform: none;
+}
+
 .card__button--submit {
   grid-row-start: 4;
   grid-column-start: 1;
@@ -88,6 +109,11 @@ header {
   color: hsl(0deg, 0%, 100%);
   border: 1px solid hsl(278deg, 68%, 11%);
 }
+@media screen and (min-width: 1440px) {
+  .card__button--continue {
+    width: 100%;
+  }
+}
 
 input {
   height: 3em;
@@ -98,6 +124,13 @@ input {
 }
 input::placeholder {
   color: hsl(270deg, 3%, 87%);
+}
+input:hover, input:active, input:focus {
+  border: 1px solid hsl(278deg, 68%, 11%);
+  cursor: pointer;
+}
+input:focus-visible {
+  outline-style: none;
 }
 
 .card__form--name {
@@ -120,13 +153,26 @@ input::placeholder {
   margin-top: 10vh;
   width: 100%;
 }
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 30%;
+    margin-top: 0;
+    margin-left: 30%;
+  }
+}
 
 .cards__container {
   position: relative;
   width: clamp(300px, 80vw, 600px);
-  aspect-ratio: 1.8244897959;
+  aspect-ratio: math, div(447, 245);
   height: 100%;
   top: 2rem;
+}
+@media screen and (min-width: 1440px) {
+  .cards__container {
+    height: 50%;
+    top: 25%;
+  }
 }
 
 .card__front {
@@ -135,11 +181,23 @@ input::placeholder {
   bottom: 0;
   left: 0;
 }
+@media screen and (min-width: 1440px) {
+  .card__front {
+    top: 0%;
+    left: 25%;
+  }
+}
 .card__back {
   position: absolute;
   width: 85%;
   right: 0;
   top: 0;
+}
+@media screen and (min-width: 1440px) {
+  .card__back {
+    top: 45%;
+    left: 40%;
+  }
 }
 .card__img--back {
   width: 100%;
@@ -153,6 +211,12 @@ input::placeholder {
   top: 15%;
   left: 8%;
 }
+@media screen and (min-width: 1440px) {
+  .card__img--logo {
+    top: 3%;
+    width: 100px;
+  }
+}
 .card__img--completed {
   width: 100px;
 }
@@ -160,11 +224,27 @@ input::placeholder {
   position: absolute;
   top: 42%;
   right: 15%;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1440px) {
+  .card__cvv {
+    font-size: 1.2rem;
+    top: 44%;
+  }
 }
 .card__number {
   position: absolute;
   bottom: 35%;
   left: 20%;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1440px) {
+  .card__number {
+    top: 24%;
+    left: 10%;
+    letter-spacing: 0.2rem;
+    font-size: 1.8rem;
+  }
 }
 .card__infos {
   display: flex;
@@ -174,10 +254,22 @@ input::placeholder {
   width: 70%;
   bottom: 10%;
   left: 14%;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1440px) {
+  .card__infos {
+    top: -15%;
+    font-size: 1.3rem;
+    width: 90%;
+    left: 5%;
+    font-size: 0.95em;
+    letter-spacing: 0.1rem;
+  }
 }
 .card__date {
   display: flex;
   justify-content: right;
+  text-transform: uppercase;
 }
 .card__form {
   display: grid;
@@ -186,6 +278,8 @@ input::placeholder {
   margin: 5%;
   row-gap: 5%;
   column-gap: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 .card__grid--1 {
   grid-column-start: 1;
@@ -214,6 +308,11 @@ input::placeholder {
   gap: 2rem;
   margin: 5%, 0;
   width: 100vw;
+}
+@media screen and (min-width: 1440px) {
+  .card__completed {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
