@@ -31,7 +31,8 @@ header {
   } 
 }
 
-.js-errorname {
+p[class*='js-error'] {
   color: $input-error !important;
   text-transform: none;
+  font-size: .7rem;
 }

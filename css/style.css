@@ -85,9 +85,10 @@ header {
   color: hsl(279deg, 6%, 55%);
 }
 
-.js-errorname {
+p[class*=js-error] {
   color: hsl(0deg, 100%, 66%) !important;
   text-transform: none;
+  font-size: 0.7rem;
 }
 
 .card__button--submit {
@@ -131,6 +132,9 @@ input:hover, input:active, input:focus {
 }
 input:focus-visible {
   outline-style: none;
+}
+input.red {
+  border-color: hsl(0deg, 100%, 66%);
 }
 
 .card__form--name {
