@@ -64,7 +64,7 @@ inputNumber.addEventListener('keyup', function (e) {
   }
 })
 inputMonth.addEventListener('keyup', function (e) {
-  let month = inputCvv.value
+  let month = inputMonth.value
   let key = e.key
   let verifMonth = key.match(/\d/)
   if (month.length === 0) {
@@ -139,5 +139,11 @@ resetBtn.addEventListener('click', (e) => {
   completedSection.setAttribute('aria-hidden', 'true')
   formSection.classList.remove('hidden')
   formSection.removeAttribute('aria-hidden')
+  cardName.innerText = "Jane Appleseed"
+  cardNumber.innerText = "1234 5678 9123 0000"
+  cardMonth.innerText = "00"
+  cardYear.innerText = "00"
+  cardCvv.innerText = "000"
   formSection.reset()
+
 })
