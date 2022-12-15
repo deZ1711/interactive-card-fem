@@ -38,6 +38,7 @@
               id="name"  
               type="text" 
               placeholder="e.g. Jane Appleseed" 
+              pattern="\D*\s\D*"
               required
       >
       <p class="js-errorname"></p>
@@ -50,7 +51,7 @@
               maxlength="16"
               minlength="16" 
               placeholder="e.g. 1234 5678 9123 0000" 
-              oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)"
+              pattern="[0-9]{16}"
               required
               >
       <p class="js-errornumber"></p>
@@ -67,6 +68,7 @@
                minlength="2" 
                placeholder="MM" 
                oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)"
+               pattern="[0-9]{2}"
                required
                >
         <input class="card__form--year" 
@@ -76,6 +78,7 @@
                minlength="2" 
                placeholder="YY" 
                oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)"
+               pattern="[0-9]{2}"
                required
                >
       </label>
@@ -90,6 +93,7 @@
              minlength="3" 
              placeholder="e.g. 123"
              oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" 
+             pattern="[0-9]{3}"
              required
              >
       <p class="js-errorcvv"></p>

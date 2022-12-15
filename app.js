@@ -23,114 +23,23 @@ let yearOk = false
 let cvvOk = false
 
 
-inputName.addEventListener('keyup', function (e) {
-  let name = inputName.value;
-  let key = e.key;
-  let verifName = key.match(/[A-Za-z\s]/);
-  if (name.length === 0) {
-    errorName.innerText = "Entrez votre nom."
-    inputName.classList.add('red')
-    nameOk = false
-  } else if (verifName) {
-    errorName.innerText = ""
-    cardName.innerText = e.target.value
-    inputName.classList.remove('red')
-    nameOk = true
-  } else {
-    errorName.innerText = "Utilisez seulement des lettres."
-    inputName.classList.add('red')
-    nameOk = false
-  }
+inputName.addEventListener('input', function (e) {
+
 })
-inputNumber.addEventListener('keyup', function (e) {
-  let numbers = inputNumber.value
-  let key = e.key
-  let verifNumber = key.match(/\d/) 
-  if (numbers.length === 0) {
-    errorNumber.innerText = "Entrez les 16 chiffres de votre carte de crédit."
-    inputNumber.classList.add('red')
-    numberOk = false
-  } else if (verifNumber) {
-    errorNumber.innerText = ""
-    cardNumber.innerText = (e.target.value).toString().replace(/\d{4}(?=.)/g, "$& ")
-    inputNumber.classList.remove('red')
-    if (numbers.length === 16) {
-      numberOk = true
-    }
-  } else {
-    errorNumber.innerText = "Utilisez seulement des chiffres."
-    inputNumber.classList.add('red')
-    numberOk = false
-  }
+
+inputNumber.addEventListener('input', function (e) {
 })
-inputMonth.addEventListener('keyup', function (e) {
-  let month = inputMonth.value
-  let key = e.key
-  let verifMonth = key.match(/\d/)
-  if (month.length === 0) {
-    errorDate.innerText = "Entrez la date d'expiration de votre carte de crédit."
-    cardMonth.classList.add('red')
-    monthOk = false
-  } else if (verifMonth) {
-    errorDate.innerText = ""
-    cardMonth.innerText = e.target.value
-    inputMonth.classList.remove('red')
-    monthOk = true
-  } else {
-    errorDate.innerText = "Utilisez seulement des chiffres."
-    inputMonth.classList.add('red')
-    monthOk = false
-  }
+
+inputMonth.addEventListener('input', function (e) {
 })
-inputYear.addEventListener('keyup', function (e) {
-  let year = inputYear.value
-  let key = e.key
-  let verifYear = key.match(/\d/)
-  if (year.length === 0) {
-    errorDate.innerText = "Entrez la date d'expiration de votre carte de crédit."
-    cardYear.classList.add('red')
-    yearOk = false
-  } else if (verifYear) {
-    errorDate.innerText = ""
-    cardYear.innerText = e.target.value
-    inputYear.classList.remove('red')
-    yearOk = true
-  } else {
-    errorDate.innerText = "Utilisez seulement des chiffres."
-    inputYear.classList.add('red')
-    yearOk = false
-  }
+
+inputYear.addEventListener('input', function (e) {
 })
-inputCvv.addEventListener('keyup', function (e) {
-  let cvv = inputCvv.value
-  let key = e.key
-  let verifCvv = key.match(/\d/)
-  if (cvv.length === 0) {
-    errorCvv.innerText = "Entrez les CVV de votre carte de crédit."
-    cardCvv.classList.add('red')
-    cvvOk = false
-  } else if (verifCvv) {
-    errorCvv.innerText = ""
-    cardCvv.innerText = e.target.value
-    inputCvv.classList.remove('red')
-    cvvOk = true
-  } else {
-    errorCvv.innerText = "Utilisez seulement des chiffres."
-    inputCvv.classList.add('red')
-    cvvOk = false
-  }
+
+inputCvv.addEventListener('input', function (e) {
 })
 
 submitBtn.addEventListener('click', (e) => {
-  if (nameOk && numberOk && monthOk && yearOk && cvvOk ) {
-    e.preventDefault()
-    formSection.classList.add('hidden')
-    formSection.setAttribute('aria-hidden', 'true')
-    completedSection.classList.remove('hidden')
-    completedSection.removeAttribute('aria-hidden')
-  } else {
-    e.preventDefault()
-  }
 })
 
 resetBtn.addEventListener('click', (e) => {
@@ -145,5 +54,4 @@ resetBtn.addEventListener('click', (e) => {
   cardYear.innerText = "00"
   cardCvv.innerText = "000"
   formSection.reset()
-
 })
