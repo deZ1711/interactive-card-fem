@@ -14,8 +14,8 @@ input {
   &:focus-visible {
     outline-style: none;
   }
-  &.red {
-    border-color: $input-error;
+  &:invalid {
+    border: 1px solid $input-error;
   }
 }
 

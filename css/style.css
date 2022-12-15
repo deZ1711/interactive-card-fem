@@ -133,8 +133,8 @@ input:hover, input:active, input:focus {
 input:focus-visible {
   outline-style: none;
 }
-input.red {
-  border-color: hsl(0deg, 100%, 66%);
+input:invalid {
+  border: 1px solid hsl(0deg, 100%, 66%);
 }
 
 .card__form--name {

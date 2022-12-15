@@ -39,6 +39,7 @@
               type="text" 
               placeholder="e.g. Jane Appleseed" 
               pattern="\D*\s\D*"
+              aria-label="nom et prénom"
               required
       >
       <p class="js-errorname"></p>
@@ -46,12 +47,13 @@
     <div class="card__grid--2">
       <label for="number">Card Number</label>
       <input  class="card__form--number" 
-              type="number" 
+              type="text" 
               id="number" 
               maxlength="16"
               minlength="16" 
               placeholder="e.g. 1234 5678 9123 0000" 
               pattern="[0-9]{16}"
+              aria-label="numéros de carte bancaire"
               required
               >
       <p class="js-errornumber"></p>
@@ -74,11 +76,12 @@
         <input class="card__form--year" 
                type="number" 
                id="year"
+               min="00"
+               max="99"
                maxlength="2" 
                minlength="2" 
                placeholder="YY" 
                oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)"
-               pattern="[0-9]{2}"
                required
                >
       </label>
@@ -87,7 +90,7 @@
     <div class="card__grid--4">
       <label for="CVV">CVV</label>
       <input class="card__form--cvv" 
-             type="number" 
+             type="text" 
              id="CVV"
              maxlength="3" 
              minlength="3" 

@@ -24,22 +24,62 @@ let cvvOk = false
 
 
 inputName.addEventListener('input', function (e) {
-
+  cardName.innerText = e.target.value
+  if (inputName.value.length === 0 || !inputName.validity.valid){
+    errorName.innerText = "Entre votre nom et prénom"
+  } else if (inputName.validity.valid) {
+    errorName.innerText = ""
+  }
 })
 
 inputNumber.addEventListener('input', function (e) {
+  cardNumber.innerText = e.target.value
+  if (inputNumber.value.length === 0 || !inputNumber.validity.valid) {
+    errorNumber.innerText = "Entrez les 16 chiffres de votre carte bancaire"
+  } else if (inputNumber.validity.valid) {
+    errorNumber.innerText = ""
+  }
 })
 
 inputMonth.addEventListener('input', function (e) {
+  cardMonth.innerText = e.target.value
+  if (inputMonth.value.length === 0) {
+    errorDate.innerText = "Ne peut être vide"
+  } else if (!inputMonth.validity.valid) {
+    errorDate.innerText = "Entrez mois et année de fin de validité de votre carte bancaire"
+  } else if (inputMonth.validity.valid) {
+    errorDate.innerText = ""
+  }
 })
 
 inputYear.addEventListener('input', function (e) {
+  cardYear.innerText = e.target.value
+  if (inputYear.value.length === 0 || !inputYear.validity.valid) {
+    errorDate.innerText = "Entrez mois et année de fin de validité de votre carte bancaire"
+  } else if (inputYear.validity.valid) {
+    errorDate.innerText = ""
+  }
 })
 
 inputCvv.addEventListener('input', function (e) {
+  errorCvv.innerText = e.target.value
+  if (inputCvv.value.length === 0 || !inputCvv.validity.valid) {
+    errorCvv.innerText = "Entrez les 3 chiffres au dos de votre carte bancaire"
+  } else if (inputCvv.validity.valid) {
+    errorCvv.innerText = ""
+  }
 })
 
 submitBtn.addEventListener('click', (e) => {
+  if (!inputName.validity.valid || !inputNumber.validity.valid || !inputMonth.validity.valid || !inputYear.validity.valid || !inputCvv.validity.valid) {
+  e.preventDefault()
+  } else if (inputName.validity.valid && inputNumber.validity.valid && inputMonth.validity.valid && inputYear.validity.valid && inputCvv.validity.valid) {
+  e.preventDefault()
+  formSection.classList.add('hidden')
+  formSection.setAttribute('aria-hidden', 'true')
+  completedSection.classList.remove('hidden')
+  completedSection.removeAttribute('aria-hidden')
+  }
 })
 
 resetBtn.addEventListener('click', (e) => {
