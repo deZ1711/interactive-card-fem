@@ -8,7 +8,12 @@
 }
 
 html {
-  font-size: 18px;
+  font-size: 14px;
+}
+@media screen and (min-width: 1440px) {
+  html {
+    font-size: 18px;
+  }
 }
 
 body {
@@ -133,8 +138,14 @@ input:hover, input:active, input:focus {
 input:focus-visible {
   outline-style: none;
 }
-input:invalid {
+input:not(:placeholder-shown) {
   border: 1px solid hsl(0deg, 100%, 66%);
+}
+input:valid {
+  border: 1px solid hsl(270deg, 3%, 87%);
+}
+input:valid:focus {
+  border: 1px solid hsl(278deg, 68%, 11%);
 }
 
 .card__form--name {

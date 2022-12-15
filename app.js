@@ -25,7 +25,7 @@ let cvvOk = false
 
 inputName.addEventListener('input', function (e) {
   cardName.innerText = e.target.value
-  if (inputName.value.length === 0 || !inputName.validity.valid){
+  if (!inputName.value || !inputName.validity.valid){
     errorName.innerText = "Entre votre nom et prénom"
   } else if (inputName.validity.valid) {
     errorName.innerText = ""
@@ -33,8 +33,8 @@ inputName.addEventListener('input', function (e) {
 })
 
 inputNumber.addEventListener('input', function (e) {
-  cardNumber.innerText = e.target.value
-  if (inputNumber.value.length === 0 || !inputNumber.validity.valid) {
+  cardNumber.innerText = e.target.value.toString().replace(/\d{4}(?=.)/g, "$& ")
+  if (!inputNumber.value || !inputNumber.validity.valid) {
     errorNumber.innerText = "Entrez les 16 chiffres de votre carte bancaire"
   } else if (inputNumber.validity.valid) {
     errorNumber.innerText = ""
@@ -43,7 +43,7 @@ inputNumber.addEventListener('input', function (e) {
 
 inputMonth.addEventListener('input', function (e) {
   cardMonth.innerText = e.target.value
-  if (inputMonth.value.length === 0) {
+  if (!inputMonth.value) {
     errorDate.innerText = "Ne peut être vide"
   } else if (!inputMonth.validity.valid) {
     errorDate.innerText = "Entrez mois et année de fin de validité de votre carte bancaire"
@@ -54,7 +54,7 @@ inputMonth.addEventListener('input', function (e) {
 
 inputYear.addEventListener('input', function (e) {
   cardYear.innerText = e.target.value
-  if (inputYear.value.length === 0 || !inputYear.validity.valid) {
+  if (!inputYear.value || !inputYear.validity.valid) {
     errorDate.innerText = "Entrez mois et année de fin de validité de votre carte bancaire"
   } else if (inputYear.validity.valid) {
     errorDate.innerText = ""
@@ -63,7 +63,7 @@ inputYear.addEventListener('input', function (e) {
 
 inputCvv.addEventListener('input', function (e) {
   errorCvv.innerText = e.target.value
-  if (inputCvv.value.length === 0 || !inputCvv.validity.valid) {
+  if (!inputCvv.value || !inputCvv.validity.valid) {
     errorCvv.innerText = "Entrez les 3 chiffres au dos de votre carte bancaire"
   } else if (inputCvv.validity.valid) {
     errorCvv.innerText = ""

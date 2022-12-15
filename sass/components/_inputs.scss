@@ -14,8 +14,14 @@ input {
   &:focus-visible {
     outline-style: none;
   }
-  &:invalid {
+  &:not(:placeholder-shown) {
     border: 1px solid $input-error;
+  }
+  &:valid {
+    border: 1px solid $light-grayish-violet;
+  }
+  &:valid:focus {
+    border: 1px solid $very-dark-violet;
   }
 }
 
